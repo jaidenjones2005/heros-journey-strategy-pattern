@@ -1,4 +1,4 @@
-public class FlyingHero extends Hero {
+public class FlyMove implements MovementStrategy {
 
     @Override
     public void move() {

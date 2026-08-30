@@ -1,6 +1,12 @@
 public class Hero {
 
-    public void move() {
-        System.out.println("I am moving.");
+    private MovementStrategy movementStrategy;
+
+    public Hero(MovementStrategy movementStrategy) {
+        this.movementStrategy = movementStrategy;
+    }
+
+    public void performMove() {
+        movementStrategy.move();
     }
 }

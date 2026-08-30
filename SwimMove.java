@@ -1,4 +1,4 @@
-public class SwimmingHero extends Hero {
+public class SwimMove implements MovementStrategy {
 
     @Override
     public void move() {
