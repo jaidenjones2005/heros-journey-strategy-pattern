@@ -9,4 +9,8 @@ public class Hero {
     public void performMove() {
         movementStrategy.move();
     }
+
+    public void setMovementStrategy(MovementStrategy strategy) {
+        this.movementStrategy = strategy;
+    }
 }

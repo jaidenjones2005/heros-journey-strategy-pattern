@@ -13,3 +13,9 @@ This approach is considered brittle because changes to the hierarchy can affect 
 Moving from inheritance to composition changed the relationship between the Hero and its movement ability. Instead of the Hero having to be a FlyingHero or SwimmingHero, the Hero now has a MovementStrategy that controls how it moves. This makes the movement behavior more flexible because I can give a Hero a different strategy without creating another subclass.
 
 If I wanted to add a Teleport ability, it would be easier with this version. I could create a new TeleportMove class that implements MovementStrategy without changing the Hero class or creating another Hero subclass. This makes the code easier to expand and mix different behaviors.
+
+## Phase 3: Dynamic Behavior
+
+I did not find switching the behavior at runtime very difficult. The setMovementStrategy method made it possible to replace the Hero's movement strategy without creating a new Hero object.
+
+Compared to Phase 1, this approach feels much more flexible. In Phase 1, changing a movement ability meant creating or changing subclasses, which affected the identity of the object. With the Strategy Pattern, I can keep the same Hero and simply swap its movement capability depending on what is happening in the game.
